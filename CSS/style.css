@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=New+Tegomin&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.body{
+    background: url("../img/bg.jpg"); 
+    min-height: 100vh; /*vh-mean view port height jitni screen ho usta img rakho*/
+    background-size: 100vw 100vh; /*100vw 100vh se img snake right mai shift ho gya*/
+    background-repeat: no-repeat;/*isse background repeate nhi hoga pr yaha jarurat nhi hai */
+    display: flex;
+    justify-content: center; /*Horizontally center*/
+    align-items: center;/*vertically center*/
+}
+
+#scoreBox{
+    position: absolute;/*taki haum isko kahi bhi move kr sake*/
+    top: 9px;
+    right: 200px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#hiscoreBox{
+    position: absolute;
+    top: 59px;
+    right: 140px;
+    font-size: 39px;
+    font-weight: bold;
+    font-family: 'New Tegomin', serif;
+}
+
+#board{
+    background: linear-gradient(rgb(159, 239, 159), rgb(239, 239, 156));
+    width: 90vmin;/*vh or vw mai se jo chota hoga vo vmin hoga*/
+    height: 92vmin;
+    border: 2px solid black;
+    display: grid;/*Yaha 18 row or 18 column bana diye*/
+    grid-template-rows: repeat(18, 1fr);
+    grid-template-columns: repeat(18, 1fr);
+
+}
+
+.head{
+    background: linear-gradient(rgb(235, 183, 183), rgb(242, 242, 176));
+    /* background: url(../img/bg.3.png); */
+    border: 2px solid rgb(34, 4, 34); ;
+    transform: scale(1.02);
+    border-radius: 9px;
+
+}
+
+.snake{
+    background-color: purple;
+    border: .25vmin solid white;
+    border-radius: 12px;
+}
+
+.food{
+    background: linear-gradient(red,purple);
+  border: .25vmin solid black;
+  border-radius: 8px;
+}
