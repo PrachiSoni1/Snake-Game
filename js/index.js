@@ -56,9 +56,9 @@ function gameEngine(){
     foodSound.play();
     score += 1;
     if(score>hiscoreval){
-        hiscoreval = score;
-        localStorage.setItem("hiscore", JSON.stringify(hiscoreval));
-        hiscoreBox.innerHTML = "HiScore: " + hiscoreval;
+        hiscore = score;
+        localStorage.setItem("hiscore", JSON.stringify(hiscore));
+        hiscore.innerHTML = "HiScore: " + hiscoreval;
     }
     scoreBox.innerHTML = "Score: " + score;
     snakeArr.unshift({x: snakeArr[0].x + inputDir.x, y: snakeArr[0].y + inputDir.y})
