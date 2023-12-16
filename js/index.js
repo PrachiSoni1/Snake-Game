@@ -16,9 +16,9 @@ food = {x:6, y:7};
 // Game Functions
 function main(ctime) {
     window.requestAnimationFrame(main);//isliye islie ishe function se call kiya jayega agin and again.
-    // console.log(ctime);//run krke dekha to fps -frame time speed fast hai bhut .toh frametimespeed ko control krne ke liye if condition
+    // console.log(ctime);//run krke dekha to fps -frame time speed fast hai bhut .toh frametimespeed ko control krne ke liye if condition.
     if((ctime - lastPaintTime)/1000 < 1/speed){
-      return; //avhi render nhi chahiye
+      return; //avhi render nhi chahiye.
     }
     lastPaintTime = ctime;
     gameEngine();
@@ -51,7 +51,7 @@ function gameEngine(){
         score = 0;
     }
 
-   // If you have eaten the food, increment the score  and regenerate the food
+   // If you have eaten the food, increment the score  and regenerate the food.
    if(snakeArr[0].y === food.y && snakeArr[0].x === food.x){
     foodSound.play();
     score += 1;
